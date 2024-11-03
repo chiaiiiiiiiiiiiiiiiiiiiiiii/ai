@@ -1,6 +1,6 @@
 tensorflow圖形檢測_使用Google Colab使用Tensorflow進行自定義對象檢測
 --------------------------------------------------------------------
-#### 跨領域-人工智慧期中報告 組員:11124111 王志節 11124114 黃安德
+#### 跨領域-人工智慧期中報告 11124112 林郁翔
 
 本文是關於如何使用 TensorFlow 物件偵測 API 建立自訂物件偵測器的詳細步驟，從安裝環境、資料收集、標註資料、產生 TFRecords 到訓練模型和測試物件偵測器，我們將使用Tensorflow物件來偵測API建立自訂物件偵測器，我將選擇檢測蘋果果實，但是您可以選擇要偵測自己的自訂物件的任何影像。
 
@@ -26,7 +26,7 @@ pip3 將自動安裝所有模型和依賴項。
 ```
 
 
-![](實作bycolab/1.jpg)
+![](1.jpg)
 如果您有可與 Tensorflow 一起使用的 GPU:
 ```
 pip install tensorflow-gpu
@@ -74,7 +74,7 @@ os.environ['PYTHONPATH'] += ":/content/drive/MyDrive/113-ai/models/research:/con
 !python object_detection/builders/model_builder_tf2_test.py
 ```
 
-![](實作bycolab/3.jpg)
+![](3.jpg)
 
 Gathering data
 -------------------------
@@ -101,7 +101,6 @@ Labeling data
 ```
 
 
-![](實作bycolab/4.jpg)
 
 
 ### 克隆之後進入目錄：
@@ -157,7 +156,6 @@ python3 generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=tes
 這兩個指令產生一個```train.record```和一個```test.record```文件，可用來訓練我們的物件偵測器。
 
 
-![](實作bycolab/5.jpg)
 
 
 訓練配置
